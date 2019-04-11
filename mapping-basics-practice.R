@@ -22,9 +22,6 @@ library(broom)
 library(httr)
 library(rgdal)
 library(rgeos) #
-#Google Maps API Key
-#reminder for how to register the API key
-#register_google("AIzaSyDiBJV_q9-RBTvuHTFQVI5YMYRDZHfzUk4")
 
 dev.new()
 nyc_map <- get_map(location = c(lon = -74.00, lat = 40.71), maptype = "terrain", zoom = 11)
@@ -112,7 +109,7 @@ manhattan_map <- get_map(location = c(lon = -74.00, lat = 40.77), maptype = "ter
 ggmap(manhattan_map) + 
   geom_polygon(data=plot_data, aes(x=long, y=lat, group=group, fill=num_points), alpha=0.75)
 
-collision_data <- read.csv
+collision_data <- read.csv(
 
 
 
